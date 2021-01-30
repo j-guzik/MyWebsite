@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.wrap {
+    position: relative;
+    width: 100vw;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* z-index: 100; */
+}
+
+h1 {
+    font-family: 'Lobster', cursive;
+}
+
+.banner {
+    position: relative;
+    min-height: 100vh;
+    width: 100vw;
+    text-align: center;
+}
+
+#waves {
+    position: absolute;
+    right: 0;
+    height: 100vh;
+    top: 0;
+}
+
+#waves path {
+    fill: url(#MyGradient);
+}
+
+img {
+    position: absolute;
+    width: 38vw;
+    top: 23vh;
+    right: 15%;
+}
+
+/* 
+.set {
+
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.set i {
+    position: absolute;
+    font-size: 55px;
+}
+
+.set i:nth-child(1) {
+    left: 20%;
+    color: #FFDC1F;
+    animation: fly 5s ease-in-out alternate infinite;
+}
+
+.set i:nth-child(2) {
+    left: 80%;
+    bottom: 5%;
+    color: #FFB849;
+    animation: fly 1s ease-in-out alternate infinite;
+}
+
+@keyframes fly {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(-40%, -50%);
+    }
+} */
