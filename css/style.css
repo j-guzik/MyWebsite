@@ -71,6 +71,14 @@ header ul li a:hover {
     padding-bottom: 5px;
 }
 
+.about,
+.experience,
+.my-projects,
+.contact {
+    padding-top: 75px;
+}
+
+
 .banner {
     position: relative;
     top: 0;
@@ -123,9 +131,16 @@ header ul li a:hover {
 
 .dots span:nth-child(1) {
     top: 10%;
-    left: calc(100% - 360px);
-    width: 75px;
-    height: 75px;
+    left: calc(100% - 330px);
+    width: 60px;
+    height: 60px;
+}
+
+.dots-contact span:nth-child(1) {
+    top: 10%;
+    left: calc(100% - 330px);
+    width: 60px;
+    height: 60px;
 }
 
 .dots span:nth-child(2) {
@@ -138,8 +153,8 @@ header ul li a:hover {
 }
 
 .dots span:nth-child(3) {
-    right: 180px;
-    bottom: 20px;
+    right: 50px;
+    bottom: 150px;
     width: 80px;
     height: 80px;
     border-radius: 38% 62% 55% 45% / 52% 53% 47% 48%;
@@ -154,12 +169,22 @@ header ul li a:hover {
 }
 
 .dots span:nth-child(5) {
-    right: 280px;
-    bottom: 80px;
+    right: 135px;
+    bottom: 150px;
     width: 25px;
     height: 25px;
     border-radius: 38% 62% 55% 45% / 52% 53% 47% 48%;
 }
+
+.dots span:nth-child(6) {
+    right: 103px;
+    bottom: 90px;
+    width: 40px;
+    height: 45px;
+    border-radius: 38% 62% 55% 45% / 52% 53% 47% 48%;
+    transform: rotate(90deg);
+}
+
 
 
 
@@ -263,6 +288,10 @@ header.sticky .name {
     margin: 0 15%;
 
 
+}
+
+.my-projects {
+    margin-bottom: 120px;
 }
 
 
@@ -381,6 +410,14 @@ div:nth-child(even):before {
     padding-bottom: 20px;
 }
 
+.timeline div p {
+    padding-bottom: 15px;
+}
+
+.timeline div p:nth-last-child(1) {
+    padding-bottom: 0;
+}
+
 
 
 .project {
@@ -419,26 +456,71 @@ div:nth-child(even):before {
 
 
 .contact {
+    position: relative;
     width: 100vw;
-    height: 100px;
-    background: rgb(166, 109, 236);
-    background: linear-gradient(130deg, rgba(156, 93, 234, 0.8214636196275386) 10%, rgba(84, 230, 241, 0.7570378493194152) 100%);
+    padding-top: 175px;
+    /* height: 100px; */
+    /* background: rgb(166, 109, 236);
+    background: linear-gradient(90deg, rgba(166, 109, 236, 1) 10%, rgba(84, 230, 241, 1) 100%); */
+}
+
+.contact h2 {
+    position: relative;
+    left: 0;
+    bottom: 5vw;
+}
+
+
+#contact-waves {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 500px;
+}
+
+#contact-waves path {
+    fill: url(#ContactGradient);
+}
+
+.media-icons {
+    position: relative;
+    bottom: 5vw;
+    left: 40%;
+}
+
+.media-icons i {
+    font-size: 40px;
+    color: black;
+}
+
+.media-icons .media-content {
+    display: inline-block;
+}
+
+.media-icons .media-content a {
+    text-decoration: none;
+    color: black;
 }
 
 
 
 
+footer {
+    position: relative;
+}
 
-
-
-
-
-
-
-
-
-
-
+footer p {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2.5vh;
+    width: 100%;
+    border-top: 1px solid black;
+    color: black;
+    text-align: center;
+    line-height: 2.5vh;
+    font-size: 1.5vh;
+}
 
 
 
