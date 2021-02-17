@@ -7,6 +7,11 @@
 
 }
 
+body {
+    max-width: 1700px;
+    margin: 0 auto;
+}
+
 .wrap {
     position: relative;
     max-width: 100vw;
@@ -38,6 +43,8 @@ header .name {
 header ul {
     position: relative;
     display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 header ul li {
@@ -62,14 +69,8 @@ header ul li a {
     color: black;
     font-family: 'Rubik', sans-serif;
     font-size: 20px;
-    padding-bottom: 0px;
-    transition: 0.3s linear;
 }
 
-
-header ul li a:hover {
-    padding-bottom: 5px;
-}
 
 .about,
 .experience,
@@ -227,6 +228,10 @@ img {
     right: 15%;
 }
 
+/* header ul li:hover {
+    background: rgba(255, 255, 255, 0.8);
+} */
+
 span,
 header.sticky ul li a,
 header .name {
@@ -288,6 +293,38 @@ header.sticky .name {
     margin: 0 15%;
 
 
+}
+
+.about .content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.about .content .info-about {
+    flex-basis: 80%;
+}
+
+.technologies h3 {
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+.technologies-buttons {
+    font-size: 60px;
+    text-align: center;
+}
+
+
+
+.technologies-buttons i {
+    position: relative;
+    width: 75px;
+    cursor: pointer;
+    color: #999;
+}
+
+.technologies-buttons i:hover {
+    color: black;
 }
 
 .my-projects {
@@ -411,6 +448,7 @@ div:nth-child(even):before {
 }
 
 .timeline div p {
+    line-height: 20px;
     padding-bottom: 15px;
 }
 
@@ -420,27 +458,150 @@ div:nth-child(even):before {
 
 
 
-.project {
-    width: 450px;
-    height: 400px;
+
+
+
+.my-projects .content {
+    margin: 0 10%;
+}
+
+
+
+
+
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.project-title {
+    padding: 25px 0;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    word-spacing: 1px;
+    font-size: 20px;
+}
+
+
+
+.project-info {
+    position: absolute;
+    width: 60%;
+    right: 0;
+    top: 0;
+}
+
+
+.project-description p {
+    padding: 0 30px;
+}
+
+.buttons {
+    text-align: center;
+}
+
+.button {
+    text-decoration: none;
+    color: #999;
+    font-size: 40px;
+    position: relative;
+    margin: 0 15px;
+}
+
+.button:hover {
+    color: black;
+}
+
+.button::after,
+.technologies-buttons i::after {
+    content: "";
+    font-size: 15px;
+    font-weight: 500;
+    position: absolute;
+    top: 45px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+}
+
+.technologies-buttons i::after {
+    top: 60px;
+    font-weight: 800;
+    color: #444;
+}
+
+.button:nth-child(1)::after {
+    content: "Live";
+}
+
+.button:nth-child(2)::after {
+    content: "Code";
+}
+
+.technologies-buttons i:nth-child(1)::after {
+    content: "HTML";
+}
+
+.technologies-buttons i:nth-child(2)::after {
+    content: "CSS";
+}
+
+.technologies-buttons i:nth-child(3)::after {
+    content: "JavaScript";
+}
+
+.technologies-buttons i:nth-child(4)::after {
+    content: "Sass";
+}
+
+.technologies-buttons i:nth-child(5)::after {
+    content: "SQL";
+}
+
+.technologies-buttons i:nth-child(6)::after {
+    content: "Git";
+}
+
+.technologies-buttons i:nth-child(7)::after {
+    content: "Photoshop";
+}
+
+.technologies-buttons i:nth-child(8)::after {
+    content: "Python";
+}
+
+.button:hover::after,
+.technologies-buttons i:hover::after {
     display: inline-block;
+}
+
+
+.project {
+    position: relative;
+    width: 470px;
+    height: 350px;
     background-color: #ffe5f8ad;
     border-radius: 25px;
-    margin: 1%;
+    margin: 2%;
 }
 
 .project-image {
     position: relative;
+    top: 0;
+    left: 0;
     height: 100%;
     width: 50%;
 }
 
 .project-image .image-container {
     position: absolute;
-    top: 10%;
-    left: -25%;
+    top: 50%;
+    left: -20%;
     width: 100%;
-    height: 80%;
+    transform: translateY(-50%);
+    height: 70%;
     border-radius: 5%;
     box-shadow: 4px 4px 25px -2px rgba(0, 0, 0, 0.3);
     background-color: white;
@@ -449,7 +610,7 @@ div:nth-child(even):before {
 .project-image .image-container img {
     position: absolute;
     top: 20%;
-    left: -20%;
+    left: -5%;
     width: 100%;
     filter: saturate(150%) contrast(120%) hue-rotate(10deg) drop-shadow(1px 20px 10px rgba(0, 0, 0, 0.3));
 }
