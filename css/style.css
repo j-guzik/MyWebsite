@@ -4,7 +4,6 @@
     box-sizing: border-box;
     -webkit-tap-highlight-color: transparent;
     /* overflow-x: hidden; */
-
 }
 
 body {
@@ -20,46 +19,32 @@ body {
 }
 
 header {
+    display: flex;
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     padding: 17px 30px;
     z-index: 100;
-    display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-header.sticky {
-    background-color: white;
-    border-bottom: 1px solid black;
 }
 
 header .name {
     font-family: 'Lobster', cursive;
 }
 
-header ul {
+header menu ul {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-header ul li {
+header menu ul li {
     position: relative;
     list-style: none;
     border-left: 3px solid rgb(151, 69, 252);
-}
-
-header.sticky ul li {
-    border-left: 3px solid black;
-}
-
-
-header ul li:nth-child(1) {
-    border-left: none;
 }
 
 header ul li a {
@@ -71,13 +56,22 @@ header ul li a {
     font-size: 20px;
 }
 
-
-.about,
-.experience,
-.my-projects,
-.contact {
-    padding-top: 75px;
+header.sticky {
+    background-color: white;
+    border-bottom: 1px solid black;
 }
+
+header.sticky menu ul li {
+    border-left: 3px solid black;
+}
+
+header menu ul li:nth-child(1) {
+    border-left: none;
+}
+
+
+
+
 
 
 .banner {
@@ -252,6 +246,13 @@ header.sticky .name {
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent;
     -moz-text-fill-color: transparent;
+}
+
+.about,
+.experience,
+.my-projects,
+.contact {
+    padding-top: 75px;
 }
 
 .heading {
@@ -682,9 +683,6 @@ footer p {
     line-height: 2.5vh;
     font-size: 1.5vh;
 }
-
-
-
 
 
 
