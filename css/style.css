@@ -18,6 +18,8 @@ body {
     overflow: hidden;
 }
 
+/* -----------------------Navigation------------------------------- */
+
 header {
     display: flex;
     position: fixed;
@@ -34,20 +36,20 @@ header .name {
     font-family: 'Lobster', cursive;
 }
 
-header menu ul {
+header .menu ul {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-header menu ul li {
+header .menu ul li {
     position: relative;
     list-style: none;
     border-left: 3px solid rgb(151, 69, 252);
 }
 
-header ul li a {
+header .menu ul li a {
     text-decoration: none;
     padding: 0 30px;
     text-transform: uppercase;
@@ -61,18 +63,45 @@ header.sticky {
     border-bottom: 1px solid black;
 }
 
-header.sticky menu ul li {
+header.sticky .menu ul li {
     border-left: 3px solid black;
 }
 
-header menu ul li:nth-child(1) {
+header .menu ul li:nth-child(1) {
     border-left: none;
 }
 
+/* header ul li:hover {
+    background: rgba(255, 255, 255, 0.8);
+} */
+
+h2 span,
+header.sticky ul li a,
+header .name {
+    background: rgb(151, 69, 252);
+    background: linear-gradient(93deg, rgba(151, 69, 252, 1) 10%, rgba(84, 230, 241, 1) 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+header.sticky .name{
+    background: rgb(151, 69, 252);
+    background: black;
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
 
 
+/* ----------------------/Navigation------------------------------- */
 
 
+/* ---------------------------Home------------------------------------ */
 
 .banner {
     position: relative;
@@ -180,73 +209,14 @@ header menu ul li:nth-child(1) {
     transform: rotate(90deg);
 }
 
-
-
-
-
-
-
-#waves {
-    position: absolute;
-    right: 0;
-    height: 100vh;
-    top: 0;
-}
-
-#waves1 {
-    position: absolute;
-    top: 65vh;
-    left: -14vw;
-    width: 29vw;
-}
-
-
-#waves path {
-    fill: url(#MyGradient2);
-}
-
-#waves1 path {
-    fill: url(#MyGradient);
-}
-
 .textBox {
     position: absolute;
     top: 40vh;
     left: 5%;
 }
 
-img {
-    position: absolute;
-    width: 38vw;
-    top: 23vh;
-    right: 15%;
-}
+/* ---------------------/Home------------------------------ */
 
-/* header ul li:hover {
-    background: rgba(255, 255, 255, 0.8);
-} */
-
-span,
-header.sticky ul li a,
-header .name {
-    background: rgb(151, 69, 252);
-    background: linear-gradient(93deg, rgba(151, 69, 252, 1) 10%, rgba(84, 230, 241, 1) 100%);
-    background-size: 100%;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-text-fill-color: transparent;
-}
-
-header.sticky .name {
-    background: rgb(151, 69, 252);
-    background: black;
-    background-size: 100%;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-text-fill-color: transparent;
-}
 
 .about,
 .experience,
@@ -286,23 +256,25 @@ header.sticky .name {
     top: 50%;
 }
 
-.about {
-    position: relative;
-}
-
 .content {
     margin: 0 15%;
+}
 
 
+/* ------------------------About Me-------------------------- */
+.about {
+    position: relative;
 }
 
 .about .content {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .about .content .info-about {
     flex-basis: 80%;
+    text-align: justify;
 }
 
 .technologies h3 {
@@ -313,6 +285,7 @@ header.sticky .name {
 .technologies-buttons {
     font-size: 60px;
     text-align: center;
+    max-width: 600px;
 }
 
 
@@ -328,10 +301,13 @@ header.sticky .name {
     color: black;
 }
 
-.my-projects {
-    margin-bottom: 120px;
-}
+/* -------------------------/About Me-------------------------- */
 
+/* ---------------------------Experience------------------------- */
+
+.experience .content{
+    margin: 0 5%;
+}
 
 .timeline {
     min-width: 300px;
@@ -435,13 +411,6 @@ div:nth-child(even):before {
 
 .timeline div:first-child {
     border-top: 0;
-    border-top-right-radius: 0;
-    border-top-left-radius: 0;
-}
-
-.timeline div:last-child {
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
 }
 
 .job-name {
@@ -461,6 +430,9 @@ div:nth-child(even):before {
 
 
 
+.my-projects {
+    margin-bottom: 120px;
+}
 
 .my-projects .content {
     margin: 0 10%;
@@ -528,7 +500,7 @@ div:nth-child(even):before {
 }
 
 .technologies-buttons i::after {
-    top: 60px;
+    top: 65px;
     font-weight: 800;
     color: #444;
 }
@@ -585,7 +557,7 @@ div:nth-child(even):before {
     height: 350px;
     background-color: #ffe5f8ad;
     border-radius: 25px;
-    margin: 2%;
+    margin: 2% auto;
 }
 
 .project-image {
@@ -685,15 +657,231 @@ footer p {
 }
 
 
+/* -----------------------media--------------------------- */
+
+
+@media(max-width: 1070px){
+    header .menu ul li a{
+        font-size: 17px;
+    }
+}
+
+@media(max-width: 1000px){
+    /* header.sticky{
+        display: none;
+    }
+
+    header .menu{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: white;
+        text-align: center;
+
+    }
+
+    header .menu ul{
+        flex-direction: column;
+    }
+
+    header .menu ul li{
+        border-left: none;
+    }
+
+    .menu-circle{
+        width: 60px;
+        height: 60px;
+        background-color: white;
+        border: 1px solid black;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+
+    .menu-circle .circle {
+        width: 12px;
+        height: 12px;
+        margin: 3px;
+        background: violet;
+        border-radius: 50%;
+        display: block;
+      } */
+
+      header,
+      header.sticky{
+          padding: 17px 45px;
+      }
+
+
+      header .menu{
+          position: fixed;
+          top: -100vh;
+          left: 100vw;
+          width: 100vw;
+          height: 100vh;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: rgba(255,255,255,0.9);
+          transition: .5s;
+      }
+
+       
+
+      header .menu ul{
+          flex-direction: column;
+      }
+
+    header.sticky .menu ul li{
+          border-left: none;
+          padding: 5px 0;
+      }
+      header .menu ul li a{
+          font-size: 40px;
+      }
+
+      header .name,.menu-circle{
+          z-index: 9999;
+      }
+      .menu-circle{
+        right: 10px;
+        flex-wrap: wrap;
+        width: 60px;
+        display: flex;
+        cursor: pointer;
+      }
+
+      .menu-circle .circle {
+        width: 10px;
+        height: 10px;
+        margin: 3px;
+        background: linear-gradient(93deg, rgba(166, 109, 236) 10%, rgba(84, 230, 241, 1) 100%);
+        border-radius: 50%;
+      }
+
+      .menu-circle.active .circle:nth-child(even){
+          opacity: 0;
+      }
+
+      .menu-circle.active + .menu{
+        top: 0;
+        left: 0;
+      }
+      
+      
+
+    }
+
+    @media(max-width:1250px){
+
+
+
+      .about .content{
+        flex-direction: column;
+      }
+
+
+      .technologies h3{
+          padding-top: 20px;
+      }
+    
+}
+
+@media(max-width: 750px){
+
+    .timeline{
+        margin: 100px auto 0;
+    }
+    .timeline div{
+        padding: 80px 0 90px;
+    }
+    .timeline div:first-child{
+        border-top: 3px solid;
+    }
+    .timeline div:last-child{
+        padding: 80px 0 0;
+    }
+
+    div:nth-child(n):before{
+        top: -70px;
+    }
+
+    div:nth-child(odd):before{
+        left: 50%;
+        transform: translateX(-50%);
+        margin-left: 0;
+    }
+
+    div:nth-child(even):before{
+        right: 50%;
+        transform: translateX(50%);
+        margin-right: 0;
+    }
+
+
+    .project-image .image-container{
+        top: 45px;
+        left: 50%;
+        transform: translateY(-50%);
+        height: 40%;
+    }
+
+    .project-image .image-container img{
+        top: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 75%;
+    }
+
+    .project{
+        margin: 7%;
+    }
+
+    .project-info{
+        top: 105px;
+        left: 0;
+        width: 100%;
+    }
+    .buttons{
+        width: 100%;
+        position: absolute;
+        top: 92%;
+        left: 0;
+    }
+
+    .buttons a:nth-child(1){
+        position: absolute;
+        top: 0;
+        left:4%;
+    }
+    .buttons a:nth-child(2){
+        position: absolute;
+        top: 0;
+        right: 4%
+    }
+
+}
+
+@media(max-width: 330px){
+    .timeline div{
+        width: calc(100vw - 30px);
+    }
+
+    .job-name{
+        font-size: 15px;
+    }
+
+    .timeline div p{
+        font-size: 13px;
+    }
+}
 
 
 
 
 
-
-
-
-
+/* -----------------------/media--------------------------- */
 
 
 
@@ -735,3 +923,4 @@ footer p {
         transform: translate(-40%, -50%);
     }
 } */
+
