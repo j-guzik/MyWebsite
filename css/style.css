@@ -475,19 +475,27 @@ div:nth-child(even):before {
     text-align: center;
 }
 
-.button {
+.button-more{
+    border: none;
     text-decoration: none;
+    background-color: transparent;
     color: #999;
     font-size: 40px;
     position: relative;
     margin: 0 15px;
+    cursor: pointer;
 }
 
-.button:hover {
+.buttons button.disabled{
+    color: #999;
+    cursor: not-allowed;
+}
+
+.button-more:hover {
     color: black;
 }
 
-.button::after,
+.button-more::after,
 .technologies-buttons i::after {
     content: "";
     font-size: 15px;
@@ -499,17 +507,18 @@ div:nth-child(even):before {
     display: none;
 }
 
+
 .technologies-buttons i::after {
     top: 65px;
     font-weight: 800;
     color: #444;
 }
 
-.button:nth-child(1)::after {
+.button-more:nth-child(1)::after {
     content: "Live";
 }
 
-.button:nth-child(2)::after {
+.button-more:nth-child(2)::after {
     content: "Code";
 }
 
@@ -545,11 +554,14 @@ div:nth-child(even):before {
     content: "Python";
 }
 
-.button:hover::after,
+.button-more:hover::after,
 .technologies-buttons i:hover::after {
     display: inline-block;
 }
 
+.buttons button.disabled:hover::after{
+    display: none;
+}
 
 .project {
     position: relative;
@@ -624,7 +636,7 @@ div:nth-child(even):before {
 
 .media-icons i {
     font-size: 40px;
-    color: black;
+    color: #ffe5f8;
 }
 
 .media-icons .media-content {
@@ -717,7 +729,7 @@ footer p {
       header .menu{
           position: fixed;
           top: -100vh;
-          left: 100vw;
+          left: 0;
           width: 100vw;
           height: 100vh;
           display: flex;
@@ -725,6 +737,7 @@ footer p {
           justify-content: center;
           background-color: rgba(255,255,255,0.9);
           transition: .5s;
+          opacity: 0;
       }
 
        
@@ -766,7 +779,7 @@ footer p {
 
       .menu-circle.active + .menu{
         top: 0;
-        left: 0;
+        opacity: 1;
       }
       
       
@@ -924,3 +937,169 @@ footer p {
     }
 } */
 
+.stop-scroll {
+    overflow: hidden;
+}
+
+
+
+
+
+
+.loader{
+    position: fixed;
+    z-index: 1000000;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.loader span {
+    background: rgb(166, 109, 236);
+    background: linear-gradient(93deg, rgba(166, 109, 236, 1) 10%, rgba(84, 230, 241, 1) 100%);
+    position: absolute;
+    border-radius: 50%;
+    display: inline-block;
+  }
+  
+ .loader p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  }
+
+.loader p:nth-child(3){
+      top: 60%;
+  }
+
+.loader p:nth-child(1){
+    position: absolute;
+    animation: skewing-child .2s ease-in-out infinite alternate;
+}
+
+.loader p:nth-child(1) span{
+    width: 50px;
+    height: 50px;
+    margin: -25px;
+    animation: moving 2s cubic-bezier(.97,.01,.12,.99) infinite alternate;
+  }
+
+  .loader p:nth-child(2){   
+       position: absolute;
+    animation: squishing 1s ease-in-out infinite alternate;}
+
+    .loader p:nth-child(2) span{
+        width: 120px;
+        height: 120px;
+        top: 50%;
+        left: 50%;
+        margin: -60px;
+        animation: skewing 2s 1.5s ease-in-out infinite;
+    }
+
+.loader.hidden{
+    animation: fadeOut 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeOut{
+    100%{
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+  @keyframes skewing {
+    0% { transform: skewX(6deg); }
+    10% { transform: skewX(-6deg); }
+    20% { transform: skewX(4deg); }
+    30% { transform: skewX(-4deg); }
+    40% { transform: skewX(2deg); }
+    50% { transform: skewX(-6deg); }
+    55% { transform: skewX(6deg); }
+    60% { transform: skewX(-5deg); }
+    65% { transform: skewX(5deg); }
+    70% { transform: skewX(-4deg); }
+    75% { transform: skewX(4deg); }
+    80% { transform: skewX(-3deg); } 
+    85% { transform: skewX(3deg); }
+    90% { transform: skewX(-2deg); } 
+    95% { transform: skewX(2deg); }
+    100%   { transform: skewX(1deg); }
+  }
+  
+  @keyframes skewing-child {
+    0%      { transform: skewX(-10deg); }
+    100%     { transform: skewX(10deg); }
+  }
+  
+  @keyframes moving {
+    0% {transform: translate(-200px);}
+    30% {transform: translate(-45px);} 
+    70% {transform: translate(45px);}
+    100% {transform: translate(200px);}
+  }
+  
+  @keyframes squishing {
+    10%, 40%, 80% { transform: scale(1, .9); }
+    0%, 30%, 60%, 100% {transform: scale(.9, 1);}
+  }
+
+
+  .modal-wrap {
+    display: none;
+}
+
+  .modal-wrap.active{
+    display: block;
+      z-index: 10000;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 100vw;
+    height: 100vh;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255,255,255,0.5);
+  }
+
+  .trailer{
+position: relative;
+display: flex;
+justify-content: center;
+align-items: center;
+  }
+
+  .trailer video{
+max-width: 900px;
+outline: none;
+position: relative;
+cursor: pointer;
+  }
+
+  .close{
+      z-index: 100000000;
+    font-size: 40px;
+    background-color: white;
+    line-height: 20px;
+    color: black;
+    position: absolute;
+    top: 0;
+    right: 50%;
+    transform: translate(50%, -50%);
+    cursor: pointer;
+  }
+
+  @media(max-width: 901px){
+      .trailer video{
+          max-width: 90%;
+      }
+  }
