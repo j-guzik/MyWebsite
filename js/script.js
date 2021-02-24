@@ -94,7 +94,16 @@ window.addEventListener("load", function () {
 
 
 //modal:
-$('.button-live, i.close').on('click', function () {
+$('.button-video, i.close').on('click', function () {
     $(".modal-wrap").toggleClass("active");
     $('body , html').toggleClass("stop-scroll");
 })
+
+var video = document.querySelector('.video');
+function pauseVideo() {
+    video.pause();
+}
+s
+$('i.close').on('click', pauseVideo);
+
+// PAUZA DZIALA TYLKO JAK JEST JEDNE ROZWIAZ TO IFEM CZY CZYMS< DODATKOWYMI KLASAMi
