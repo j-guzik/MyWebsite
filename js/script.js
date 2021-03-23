@@ -85,11 +85,7 @@ $(".menu-circle").on("click", function () {
 
 
 // loader:
-
-window.addEventListener("load", function () {
-    const loader = document.querySelector(".loader");
-    loader.className += "hidden";
-})
+// setTimeout(function () { $(".loader").fadeOut("slow"); }, 5000);
 
 
 
@@ -103,7 +99,80 @@ var video = document.querySelector('.video');
 function pauseVideo() {
     video.pause();
 }
-s
-$('i.close').on('click', pauseVideo);
 
-// PAUZA DZIALA TYLKO JAK JEST JEDNE ROZWIAZ TO IFEM CZY CZYMS< DODATKOWYMI KLASAMi
+$('i.close').on('click', pauseVideo); // PAUZA DZIALA TYLKO JAK JEST JEDNE ROZWIAZ TO IFEM CZY CZYMS< DODATKOWYMI KLASAMi
+
+
+
+
+
+
+
+$(document).on('scroll', function () {
+
+    const windowHeight = $(window).height();
+    const scrollValue = $(this).scrollTop();
+    // console.log(scrollValue);
+
+
+    const $technologies = $('.technologies');
+    const $infoabout = $('.info-about');
+    const $about = $('.about');
+    const aboutFromTop = $about.offset().top;
+    const aboutHeight = $about.outerHeight(true);
+
+    if (scrollValue > aboutFromTop + aboutHeight - windowHeight) {
+        $infoabout.addClass('active');
+        $technologies.addClass('active');
+    }
+
+    if (scrollValue < 100) {
+        $infoabout.removeClass('active');
+    }
+
+})
+
+
+
+
+// typing:
+
+const box = document.querySelector('.typing');
+const text = ["Hi! I'm Justyna!", "I'm Frontend Developer.", "Below you will find some information about me and my projects.", " "];
+let wordIndex = 0;
+let oldTime = 0;
+const speed = 100;
+let textIndex = 0;
+let activeDOMElement = box;
+
+const typing = (newTime) => {
+
+    if(newTime - oldTime > speed){
+        if(wordIndex === text[textIndex].length){
+            if(textIndex === text.length-1){
+                return;
+            }
+
+            return setTimeout(() => {
+            // box.textContent = " ";
+            textIndex++;
+            wordIndex = 0;
+            requestAnimationFrame(typing);
+        }, 1000)
+
+        } else if(wordIndex===0){
+            const p = document.createElement('p');
+            box.appendChild(p);
+            activeDOMElement = p;
+        }
+
+        oldTime = newTime;
+        const letter = text[textIndex].substr(wordIndex, 1);
+        activeDOMElement.textContent += letter;
+        wordIndex++;
+    }
+
+    requestAnimationFrame(typing);
+}
+
+typing();

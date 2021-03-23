@@ -16,10 +16,16 @@
 </head>
 
 <body>
-    <div class="loader">
-        <p><span></span></p>
-        <p><span></span></p>
-    </div>
+    <!-- <div class="loader">
+        <div class="dots">
+            <span>
+                <p><span></span></p>
+                <p><span></span></p>
+                <p></p>
+                <p></p>
+            </span>
+        </div>
+    </div> -->
     <div class="wrap">
         <header>
             <h1 class="name">Justyna Guzik</h1>
@@ -53,10 +59,20 @@
                 <span></span>
                 <span></span>
                 <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
-            <!-- <div class="textBox">
-                <h2>I'm Justyna. I want to be Frontend Developer.</h2>
-            </div> -->
+            <div class="textBox">
+                <div class="terminal">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="typing">
+                </div>
+                <span class="arrow">></span>
+            </div>
         </section>
         <section class="about" id="about">
             <div class="heading">
@@ -144,15 +160,15 @@
                             </div>
                         </div>
                         <div class="project-info">
-                            <div class="project-title">be like indiana jones</div>
+                            <div class="project-title">get jellies</div>
                             <div class="project-description">
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt facilis inventore
                                     eum fugit et voluptatem architecto quis, totam eius ducimus enim quo! Totam, nemo
                                     voluptatibus modi in sint facilis quos.</p>
                             </div>
                             <div class="buttons">
-                                <a href="#" class="button-more"><i class="far fa-eye"></i></a>
-                                <a href="#" class="button-more"><i class="fab fa-github"></i></a>
+                                <a href="https://get-jellies.netlify.app/" target="_blank" class="button-more"><i class="far fa-eye"></i></a>
+                                <a href="https://github.com/j-guzik/GetJellies" target="_blank" class="button-more"><i class="fab fa-github"></i></a>
                             </div>
                         </div>
                     </div>
@@ -163,7 +179,7 @@
                             </div>
                         </div>
                         <div class="project-info">
-                            <div class="project-title">Museum Management</div>
+                            <div class="project-title">museum management</div>
                             <div class="project-description">
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt facilis inventore
                                     eum fugit et voluptatem architecto quis, totam eius ducimus enim quo! Totam, nemo
@@ -217,72 +233,6 @@
                 </div>
             </div>
         </section>
-        <!-- <svg id="contact-waves" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-            <defs>
-                <linearGradient id="ContactGradient">
-                  <stop offset="10%" stop-color="rgba(166, 109, 236, 1)" />
-                  <stop offset="100%" stop-color="rgba(84, 230, 241, 1)" />
-                </linearGradient>
-              </defs>
-            <path fill="#00cba9" fill-opacity="1" d="M0,32L34.3,69.3C68.6,107,137,181,206,218.7C274.3,256,343,256,411,229.3C480,203,549,149,617,122.7C685.7,96,754,96,823,106.7C891.4,117,960,139,1029,138.7C1097.1,139,1166,117,1234,112C1302.9,107,1371,117,1406,122.7L1440,128L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"></path>
-        </svg> -->
-        <!-- <svg id="contact-waves" xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 1580 397">
-        <defs>
-            <linearGradient id="ContactGradient">
-              <stop offset="10%" stop-color="rgba(166, 109, 236, 1)" />
-              <stop offset="100%" stop-color="rgba(84, 230, 241, 1)" />
-            </linearGradient>
-          </defs>
-        <path fill="#00cba9" fill-opacity="1"
-           d="M 0.00,397.00
-              C 0.00,397.00 44.00,397.00 44.00,397.00
-                44.00,397.00 59.00,396.00 59.00,396.00
-                59.00,396.00 183.00,396.00 183.00,396.00
-                183.00,396.00 457.00,396.00 457.00,396.00
-                457.00,396.00 472.00,395.00 472.00,395.00
-                472.00,395.00 592.00,395.00 592.00,395.00
-                592.00,395.00 855.00,395.00 855.00,395.00
-                855.00,395.00 870.00,394.00 870.00,394.00
-                870.00,394.00 1090.00,394.00 1090.00,394.00
-                1090.00,394.00 1236.00,394.00 1236.00,394.00
-                1236.00,394.00 1253.00,393.00 1253.00,393.00
-                1253.00,393.00 1580.00,393.00 1580.00,393.00
-                1580.00,393.00 1580.00,49.00 1580.00,49.00
-                1574.94,51.35 1569.73,56.20 1565.00,59.57
-                1558.88,63.95 1548.70,70.28 1542.00,73.63
-                1508.71,90.28 1472.79,95.43 1436.00,95.00
-                1436.00,95.00 1426.00,94.09 1426.00,94.09
-                1389.35,91.57 1353.26,82.42 1319.00,69.19
-                1319.00,69.19 1275.00,50.42 1275.00,50.42
-                1275.00,50.42 1234.00,35.34 1234.00,35.34
-                1206.51,26.56 1170.84,19.67 1142.00,20.00
-                1142.00,20.00 1125.00,21.00 1125.00,21.00
-                1119.27,21.07 1113.63,22.31 1108.00,23.25
-                1075.71,28.63 1049.31,40.43 1021.00,56.42
-                991.70,72.99 962.07,91.82 927.00,90.99
-                908.97,90.56 895.39,82.90 880.00,74.78
-                880.00,74.78 841.00,56.40 841.00,56.40
-                817.35,46.93 798.68,41.94 774.00,36.35
-                759.40,33.04 737.77,29.02 723.00,29.00
-                723.00,29.00 699.00,29.00 699.00,29.00
-                699.00,29.00 689.00,29.91 689.00,29.91
-                670.01,31.21 651.73,34.20 633.00,37.58
-                633.00,37.58 546.00,55.39 546.00,55.39
-                546.00,55.39 494.00,62.17 494.00,62.17
-                494.00,62.17 471.00,64.00 471.00,64.00
-                433.82,64.43 396.62,60.05 361.00,48.98
-                361.00,48.98 286.00,20.69 286.00,20.69
-                257.22,10.67 226.37,4.13 196.00,1.91
-                196.00,1.91 186.00,1.00 186.00,1.00
-                186.00,1.00 150.00,1.00 150.00,1.00
-                150.00,1.00 138.00,1.91 138.00,1.91
-                104.71,4.24 71.94,12.39 41.00,24.80
-                30.96,28.83 21.47,33.49 12.00,38.70
-                8.94,40.38 2.75,43.26 1.02,46.21
-                -0.21,48.31 0.00,51.61 0.00,54.00
-                0.00,54.00 0.00,397.00 0.00,397.00 Z" />
-   </svg> -->
         <svg id="contact-waves" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1580 470">
             <defs>
                 <linearGradient id="ContactGradient">
@@ -355,17 +305,15 @@
                         </div>
                     </div>
                     <div class="github">
-                        <i class="fab fa-github"></i>
+                        <a href="https://github.com/j-guzik" target="_blank"><i class="fab fa-github"></i></a>
                         <div class="media-content">
-                            <h3>GitHub</h3>
-                            <p><a href="https://github.com/j-guzik">www.github.com/j-guzik</a></p>
+                          <a href="https://github.com/j-guzik" target="_blank"><h3>GitHub</h3></a>
                         </div>
                     </div>
                     <div class="linkedin">
-                        <i class="fab fa-linkedin"></i>
+                       <a href="https://www.linkedin.com/in/justyna-guzik-986468207/" target="_blank"><i class="fab fa-linkedin"></i></a>
                         <div class="media-content">
-                            <h3>LinkedIn</h3>
-                            <p>536 150 148</p>
+                          <a href="https://www.linkedin.com/in/justyna-guzik-986468207/" target="_blank"><h3>LinkedIn</h3></a>
                         </div>
                     </div>
                 </div>
