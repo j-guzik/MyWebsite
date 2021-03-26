@@ -78,7 +78,8 @@ header .menu ul li:nth-child(1) {
 h2 span,
 header.sticky ul li a,
 header .name,
-.arrow {
+.arrow,
+.project-technologies {
     background: rgb(151, 69, 252);
     background: linear-gradient(93deg, rgba(151, 69, 252, 1) 10%, rgba(84, 230, 241, 1) 100%);
     background-size: 100%;
@@ -109,7 +110,6 @@ header.sticky .name {
     top: 0;
     left: 0;
     min-height: 100vh;
-    width: 100vw;
     /* background-color: #96aaffb3; */
 
 }
@@ -129,7 +129,7 @@ header.sticky .name {
 
 
 .banner::before {
-    top: -10%;
+    top: -3%;
     right: -10%;
 }
 
@@ -156,7 +156,7 @@ header.sticky .name {
 }
 
 .dots span:nth-child(1) {
-    top: 31%;
+    top: 39%;
     left: 79%;
     width: 70px;
     height: 63px;
@@ -166,7 +166,7 @@ header.sticky .name {
 
 .dots span:nth-child(2) {
     right: 50px;
-    bottom: 150px;
+    bottom: 71px;
     width: 80px;
     height: 80px;
     border-radius: 38% 62% 55% 45% / 52% 53% 47% 48%;
@@ -174,8 +174,8 @@ header.sticky .name {
 }
 
 .dots span:nth-child(3) {
-    bottom: 57%;
-    left: 92%;
+    bottom: 48%;
+    left: 93%;
     width: 20px;
     height: 20px;
     border-radius: 38% 62% 55% 45% / 52% 53% 47% 48%;
@@ -184,7 +184,7 @@ header.sticky .name {
 
 .dots span:nth-child(4) {
     right: 135px;
-    bottom: 150px;
+    bottom: 78px;
     width: 25px;
     height: 25px;
     border-radius: 38% 62% 55% 45% / 52% 53% 47% 48%;
@@ -193,7 +193,7 @@ header.sticky .name {
 
 .dots span:nth-child(5) {
     right: 103px;
-    bottom: 90px;
+    bottom: 28px;
     width: 40px;
     height: 45px;
     border-radius: 38% 62% 55% 45% / 52% 53% 47% 48%;
@@ -201,17 +201,17 @@ header.sticky .name {
 }
 
 .dots span:nth-child(6) {
-    left: 50%;
-    bottom: -3%;
-    width: 21vw;
-    height: 21vw;
+    left: 52%;
+    bottom: -5%;
+    width: 18vw;
+    height: 18vw;
     border-radius: 38% 62% 55% 45% / 52% 53% 47% 48%;
     transform: rotate(90deg);
 }
 
 .dots span:nth-child(7) {
     left: 76%;
-    bottom: 16%;
+    bottom: 3%;
     width: 8vw;
     height: 10vw;
     border-radius: 38% 62% 55% 45% / 52% 53% 47% 48%;
@@ -220,9 +220,9 @@ header.sticky .name {
 }
 
 .dots span:nth-child(8) {
-    left: 86%;
-    bottom: 35%;
-    width: 6vw;
+    left: 84%;
+    bottom: 26%;
+    width: 8vw;
     height: 10vw;
     border-radius: 38% 62% 55% 45% / 52% 53% 47% 48%;
     transform: rotate(90deg);
@@ -231,12 +231,21 @@ header.sticky .name {
 
 .dots span:nth-child(9) {
     left: 66%;
-    bottom: 43%;
+    bottom: 34%;
     width: 11vw;
     height: 10vw;
     border-radius: 38% 62% 55% 45% / 52% 53% 47% 48%;
     transform: rotate(90deg);
     animation: morphing 6s alternate infinite;
+}
+
+.dots span:nth-child(10) {
+    bottom: 29%;
+    left: 78%;
+    width: 24px;
+    height: 24px;
+    border-radius: 38% 62% 55% 45% / 52% 53% 47% 48%;
+    animation: morphing 6.6s alternate infinite;
 }
 
 /* .dots span:nth-child(11) {
@@ -268,11 +277,10 @@ header.sticky .name {
 
 .textBox {
     position: relative;
-    top: 5vh;
+    top: calc(5vh + 80px);
     left: 3%;
     width: 680px;
     height: 500px;
-    margin-top: 80px;
     border: 1px solid black;
     text-align: center;
     border-radius: 45px;
@@ -307,11 +315,11 @@ header.sticky .name {
 }
 
 .typing {
-    font-size: 35px;
     font-family: 'Lobster', cursive;
 }
 
 .typing p {
+    font-size: 35px;
     line-height: 150%;
     margin: 35px 15px;
 }
@@ -354,7 +362,7 @@ header.sticky .name {
 .arrow {
     position: absolute;
     top: 82%;
-    left: 46%;
+    left: calc(50% - 27px);
     transform: rotate(90deg);
     font-size: 97px;
     animation: arrow 15s, cursor .3s infinite alternate 15s;
@@ -413,7 +421,7 @@ header.sticky .name {
     border-radius: 1px;
     background: black;
     position: absolute;
-    left: 37%;
+    left: 34%;
     top: 50%;
 }
 
@@ -424,7 +432,7 @@ header.sticky .name {
     border-radius: 1px;
     background: black;
     position: absolute;
-    right: 37%;
+    right: 34%;
     top: 50%;
 }
 
@@ -445,8 +453,9 @@ header.sticky .name {
 }
 
 .about .content .info-about {
-    flex-basis: 80%;
+    flex-basis: 90%;
     text-align: justify;
+    font-size: 19px;
     padding-right: 10px;
 }
 
@@ -618,11 +627,11 @@ div:nth-child(even):before {
 .projects {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .project-title {
-    padding: 25px 0;
+    padding: 25px 10px 15px;
     text-align: center;
     text-transform: uppercase;
     font-weight: 700;
@@ -639,13 +648,24 @@ div:nth-child(even):before {
     top: 0;
 }
 
+.project-technologies {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 8px;
+    font-weight: 700;
+}
+
 
 .project-description p {
     padding: 0 30px;
+    text-align: justify;
 }
 
 .buttons {
     text-align: center;
+    position: relative;
+    top: 80%;
+    left: 19%;
 }
 
 .button-more {
@@ -740,14 +760,14 @@ div:nth-child(even):before {
 .project {
     position: relative;
     width: 470px;
-    height: 350px;
+    min-height: 370px;
     background-color: #ffe5f8ad;
     border-radius: 25px;
-    margin: 2% auto;
+    margin: 2% 36px;
 }
 
 .project-image {
-    position: relative;
+    position: absolute;
     top: 0;
     left: 0;
     height: 100%;
@@ -768,7 +788,8 @@ div:nth-child(even):before {
 
 .project-image .image-container img {
     position: absolute;
-    top: 20%;
+    transform: translateY(-50%);
+    top: 50%;
     left: -5%;
     width: 100%;
     filter: saturate(150%) contrast(120%) hue-rotate(10deg) drop-shadow(1px 20px 10px rgba(0, 0, 0, 0.3));
@@ -933,6 +954,10 @@ footer p {
         padding: 17px 45px;
     }
 
+    header {
+        background-color: rgba(255, 255, 255, 1);
+        border-bottom: 1px solid black;
+    }
 
     header .menu {
         position: fixed;
@@ -980,8 +1005,12 @@ footer p {
         width: 10px;
         height: 10px;
         margin: 3px;
-        background: linear-gradient(93deg, rgba(166, 109, 236) 10%, rgba(84, 230, 241, 1) 100%);
+        background: black;
         border-radius: 50%;
+    }
+
+    header.sticky .menu-circle .circle {
+        background: linear-gradient(93deg, rgba(166, 109, 236) 10%, rgba(84, 230, 241, 1) 100%);
     }
 
     .menu-circle.active .circle:nth-child(even) {
@@ -999,6 +1028,17 @@ footer p {
 
 @media(max-width:1250px) {
 
+    .heading h2::before,
+    .heading h2::after {
+        right: 50%;
+        top: 100%;
+    }
+
+    .heading h2::after {
+        left: 50%;
+    }
+
+
     .about .content {
         flex-direction: column;
     }
@@ -1011,6 +1051,10 @@ footer p {
     .textBox {
         left: 50%;
         transform: translateX(-50%);
+    }
+
+    .typing p {
+        font-size: 31px;
     }
 
     .banner::after {
@@ -1032,6 +1076,11 @@ footer p {
 }
 
 @media(max-width: 750px) {
+
+
+
+
+
 
     .timeline {
         margin: 100px auto 0;
@@ -1066,52 +1115,113 @@ footer p {
     }
 
 
+    /* .project {
+        height: auto;
+    } */
+
+    .my-projects {
+        margin-bottom: 10px;
+    }
+
+    .project-image {
+        position: relative;
+        top: 0;
+        left: -20%;
+        height: 130px;
+        width: 70%;
+    }
+
     .project-image .image-container {
         top: 45px;
         left: 50%;
         transform: translateY(-50%);
-        height: 40%;
+        height: 100%;
     }
 
     .project-image .image-container img {
-        top: 10px;
+        top: 47%;
         left: 50%;
-        transform: translateX(-50%);
-        width: 75%;
+        transform: translate(-50%, -50%);
+        width: 50%;
     }
 
     .project {
-        margin: 7%;
+        margin: 0 0 65px;
+    }
+
+    .project:nth-child(1) {
+        margin-top: 25px;
     }
 
     .project-info {
-        top: 105px;
+        position: relative;
+        top: -30px;
         left: 0;
         width: 100%;
     }
 
     .buttons {
-        width: 100%;
-        position: absolute;
-        top: 92%;
+        top: -20px;
         left: 0;
     }
 
-    .buttons a:nth-child(1) {
-        position: absolute;
-        top: 0;
-        left: 4%;
+    .button-more::after {
+        display: inline-block;
     }
 
-    .buttons a:nth-child(2) {
-        position: absolute;
-        top: 0;
-        right: 4%
+    .textBox {
+        width: 450px;
+    }
+
+
+    .typing p {
+        transform: scale(0.8);
+        margin: 18px 2px;
     }
 
 }
 
+
+
+@media(max-width: 550px) {
+
+    .button-more {
+        color: black;
+    }
+
+    header,
+    header.sticky {
+        padding: 17px 11px;
+    }
+
+    .terminal span:nth-child(1) {
+        right: 80px;
+    }
+
+    .terminal span:nth-child(2) {
+        right: 50px;
+    }
+
+    .terminal span:nth-child(3) {
+        right: 20px;
+    }
+
+    .textBox {
+        width: 85%;
+        height: 460px;
+    }
+
+
+
+
+}
+
 @media(max-width: 450px) {
+
+    .project-image .image-container img {
+        width: 70%;
+    }
+
     .media-icons .media-content {
         display: block;
         margin-left: 0;
@@ -1146,12 +1256,32 @@ footer p {
         font-size: 15px;
     }
 
-    .timeline div p {
+    .timeline div p,
+    .project-description {
         font-size: 13px;
     }
 
 }
 
+
+
+@media(max-width: 260px) {
+
+    header,
+    header.sticky {
+        font-size: 8px;
+    }
+}
+
+
+
+@media(max-height: 600px) and (orientation: landscape) {
+    .textBox {
+        height: 400px;
+        width: 580px;
+        transform: translateX(-50%) scale(0.8);
+    }
+}
 
 
 

@@ -2,9 +2,36 @@
 
 var header = document.querySelector('header');
 
-window.addEventListener('scroll', function () {
-    header.classList.toggle('sticky', window.scrollY > 0)
-})
+    // if ($(window).width() >= 984) {
+        window.addEventListener('scroll', function () {
+            header.classList.toggle('sticky', window.scrollY > 0)
+        })
+    // }
+
+
+// function checkWidth(init)
+// {
+//     /*If browser resized, check width again */
+//     if ($(window).width() < 984) {
+//         $('header').addClass('sticky');
+//     }
+//     else {
+//         if (!init) {
+//             $('header').removeClass('sticky');
+//         }
+        
+//     }
+// }
+
+// $(document).ready(function() {
+//     checkWidth(true);
+
+//     $(window).resize(function() {
+//         checkWidth(false);
+//     });
+// });
+
+
 
 // mobile menu
 
