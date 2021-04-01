@@ -26,10 +26,10 @@
             </span>
         </div>
     </div> -->
-    <div class="wrap">
+    <div class="wrap particletext bubbles">
         <header>
             <h1 class="name">Justyna Guzik</h1>
-            <div class="menu-circle">
+            <div class="menu-circle" onclick="circleMenu()">
                 <div class="circle"></div>
                 <div class="circle"></div>
                 <div class="circle"></div>
@@ -42,11 +42,11 @@
             </div>
             <menu class="menu">
                 <ul>
-                    <li><a class="letters" href="#home">Home</a></li>
-                    <li><a class="letters" href="#about">About Me</a></li>
-                    <li><a class="letters" href="#experience">Experience</a></li>
-                    <li><a class="letters" href="#my-projects">My Projects</a></li>
-                    <li><a class="letters" href="#contact">Contact</a></li>
+                    <li><a class="particletext bubbles" data-section="home" href="#home" onclick="menu()">Home</a></li>
+                    <li><a class="particletext bubbles" data-section="about" href="#about" onclick="menu()">About Me</a></li>
+                    <li><a  class="particletext bubbles" data-section="experience" href="#experience" onclick="menu()">Experience</a></li>
+                    <li><a class="particletext bubbles" data-section="my-projects" href="#my-projects" onclick="menu()">My Projects</a></li>
+                    <li><a class="particletext bubbles" data-section="contact" href="#contact" onclick="menu()">Contact</a></li>
                 </ul>
             </menu>
 
@@ -86,14 +86,16 @@
                     <p>Knowledge and experience I have gained in the past and during my studies have taught me to be
                         well organized and communicative.
                         I am strongly motivated to learn and I have the ability to think logically. I’m interested in
-                        web design and development. I want to apply theoretical knowledge to practice in a safe and
+                        <b>web design and development</b>. I am currently developing my JavaScript skills and I am at
+                        the beginning of my journey with <b>React</b>.
+                        I plan to take part in a React or web development course organized by my university, which will
+                        end with a certificate. Moreover, I know the basics of Java and Python. I want to apply theoretical 
+                        knowledge to practice in a safe and
                         realistic environment.
-                        um perferendis delectus autem corporis optio molestiae quam labore cum mollitia, corrupti
-                        ullam
                     </p>
                 </div>
-                <div class="technologies">
-                    <h3>Technologies</h2>
+                <div class="technologies particletext bubbles">
+                    <h3>Main technologies</h2>
                         <div class="technologies-buttons">
                             <i class="fab fa-html5"></i>
                             <i class="fab fa-css3-alt"></i>
@@ -102,7 +104,6 @@
                             <i class="fas fa-database"></i>
                             <i class="fab fa-git-alt"></i>
                             <i class="fas fa-images"></i>
-                            <i class="fab fa-python"></i>
                         </div>
                 </div>
             </div>
@@ -114,7 +115,7 @@
             <div class="content">
                 <div class="timeline">
                     <div>
-                        <h2 class="job-name">Full-stack developer - intern</h2>
+                        <h2 class="job-name">Full-stack developer - student internship</h2>
                         <p>application development</p>
                         <p>creating unit tests</p>
                         <p>participation in Daily Scrum meetings</p>
@@ -135,11 +136,10 @@
                     </div>
                     <div>
                         <h2 class="job-name">Computer Science student</h2>
-                        <p>application development in Java</p>
-                        <p>creating unit tests</p>
+                        <p> IT system administration</p>
                     </div>
                     <div>
-                        <h2 class="job-name">Intern at Urząd Skabowy w Bochni</h2>
+                        <h2 class="job-name">Student internship at Urząd Skabowy w Bochni</h2>
                         <p>archive documents</p>
                         <p>keep records of debtors</p>
                         <p>edit and format correspondence</p>
@@ -167,7 +167,9 @@
                                 <p>CSS</p>
                             </div>
                             <div class="project-description">
-                                <p>This is a tile matching game. You need to match at least 3 of the same pictures. You go to the higher level when you reach the indicated number of points in the designated moves.</p>
+                                <p>This is a tile matching game. You need to match at least 3 of the same pictures. You
+                                    go to the higher level when you reach the indicated number of points in the
+                                    designated moves.</p>
                             </div>
                         </div>
                         <div class="buttons">
@@ -191,11 +193,13 @@
                                 <p>CSS</p>
                             </div>
                             <div class="project-description">
-                                <p>Web application for .net Core MVC. It is used to manage museum exhibits. The application is connected to the database. Authentication is required to view the data.</p>
+                                <p>Web application for .net Core MVC. It is used to manage museum exhibits. The data can only be seen after logging in. The
+                                    application is connected to the database.</p>
                             </div>
                         </div>
                         <div class="buttons">
-                            <button class="button-live button-video button-more"><i class="far fa-eye"></i></button>
+                            <button class="button-live button-video-museum button-more"><i
+                                    class="far fa-eye"></i></button>
                             <a href="https://github.com/j-guzik/MuseumManagement" target="_blank" class="button-more"><i class="fab fa-github"></i></a>
                         </div>
                     </div>
@@ -215,7 +219,8 @@
                             </div>
                             <div class="project-description">
                                 <p>
-                                    Website designed to present my qualifications and projects in an attractive and transparent way. 
+                                    Website designed to present my qualifications and projects in an attractive and
+                                    transparent way.
                                     Apart from pure JS I also used jquery</p>
                             </div>
                         </div>
@@ -236,14 +241,38 @@
                                 <p>python</p>
                             </div>
                             <div class="project-description">
-                                <p>An arcade game created with the help of the pygame library. Project created in a group of two. 
-                                    The goal of the game is to get rid of the enemies and save the princess waiting at the end of the game.</p>
+                                <p>An arcade game created with the help of the pygame library. Project created in a
+                                    group of two.
+                                    The goal of the game is to get rid of the enemies and save the princess waiting at
+                                    the end of the game.</p>
                             </div>
                         </div>
                         <div class="buttons">
-                            <button class="button-live button-video button-more"><i class="far fa-eye"></i></button>
+                            <button class="button-live button-video-python button-more"><i
+                                    class="far fa-eye"></i></button>
                             <!-- <a href="#" class="button"><i class="far fa-eye"></i></a> -->
                             <a href="https://github.com/j-guzik/ActionGameInPython" target="_blank" class="button-more"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <div class="project-image">
+                            <div class="image-container">
+                                <img src="img/img5.png" alt="">
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-title">split bills with friends app</div>
+                            <div class="project-technologies">
+                                <p>React Native</p>
+                            </div>
+                            <div class="project-description">
+                                <p>
+                                    The application is intended to share costs between friends for various events.
+                                    An additional advantage of the application will be the ability to scan receipts and extract data from them.</p>
+                            </div>
+                        </div>
+                        <div class="dev-info">
+                            <p>App in development.</p>
                         </div>
                     </div>
                 </div>
@@ -294,13 +323,6 @@
         </svg>
 
         <section class="contact" id="contact">
-            <!-- <div class="dots dots-contact">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-            </div> -->
             <div class="heading">
                 <h2>Contact</h2>
             </div>
@@ -323,13 +345,13 @@
                     <div class="github">
                         <a href="https://github.com/j-guzik" target="_blank"><i class="fab fa-github"></i></a>
                         <div class="media-content">
-                          <a href="https://github.com/j-guzik" target="_blank"><h3>GitHub</h3></a>
+                            <a href="https://github.com/j-guzik" target="_blank"><h3>GitHub</h3></a>
                         </div>
                     </div>
                     <div class="linkedin">
-                       <a href="https://www.linkedin.com/in/justyna-guzik-986468207/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.linkedin.com/in/justyna-guzik-986468207/" target="_blank"><i class="fab fa-linkedin"></i></a>
                         <div class="media-content">
-                          <a href="https://www.linkedin.com/in/justyna-guzik-986468207/" target="_blank"><h3>LinkedIn</h3></a>
+                            <a href="https://www.linkedin.com/in/justyna-guzik-986468207/" target="_blank"><h3>LinkedIn</h3></a>
                         </div>
                     </div>
                 </div>
@@ -339,19 +361,18 @@
             <p>&copy; 2020 ALL RIGHTS RESERVED</p>
         </footer>
     </div>
-    <div class="modal-wrap">
+    <div class="modal-wrap" id="museumManagement">
         <div class="trailer">
-            <video src="GameInPython.mp4" controls="true" class="video"></video>
-            <i class="close fas fa-window-close"></i>
+            <video src="video/MuseumManagement.mp4" controls="true"id="videoMuseumManagement"></video>
+            <i class="close closeMuseum fas fa-window-close"></i>
         </div>
     </div>
-    <!-- <div class="modal-wrap">
+    <div class="modal-wrap" id="pythonGame">
         <div class="trailer">
-            <video src="GameInPython.mp4" controls="true" class="video"></video>
-            <i class="close fas fa-window-close"></i>
+            <video src="video/GameInPython.mp4" controls="true" id="videoPythonGame"></video>
+            <i class="close closePython fas fa-window-close"></i>
         </div>
-    </div> -->
-    <!-- </div> -->
+    </div>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"
         integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
