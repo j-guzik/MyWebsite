@@ -361,7 +361,7 @@ header.sticky .name {
 
 .arrow {
     position: absolute;
-    top: 82%;
+    top: 80%;
     left: calc(50% - 27px);
     transform: rotate(90deg);
     font-size: 97px;
@@ -576,6 +576,7 @@ header.sticky .name {
 }
 
 div:nth-child(odd):before {
+    top: 0;
     left: 100%;
     margin-left: -20px;
 }
@@ -586,6 +587,7 @@ div:nth-child(odd):before {
 }
 
 div:nth-child(even):before {
+    top: 0;
     right: 100%;
     margin-right: -20px;
 }
@@ -601,7 +603,7 @@ div:nth-child(even):before {
 
 .timeline div p {
     line-height: 20px;
-    padding-bottom: 15px;
+    padding: 0 5px 15px;
 }
 
 .timeline div p:nth-last-child(1) {
@@ -669,6 +671,8 @@ div:nth-child(even):before {
 }
 
 .button-more {
+    height: 56.8px;
+    width: 50px;
     border: none;
     text-decoration: none;
     background-color: transparent;
@@ -678,6 +682,11 @@ div:nth-child(even):before {
     margin: 0 15px;
     cursor: pointer;
     outline: none;
+}
+
+.button-more i {
+    height: 50px;
+    width: 50px;
 }
 
 .buttons button.disabled {
@@ -753,8 +762,16 @@ div:nth-child(even):before {
     display: inline-block;
 }
 
-.buttons button.disabled:hover::after {
+.buttons .disabled:hover::after {
     display: none;
+}
+
+.dev-info {
+    text-align: center;
+    position: relative;
+    top: 85%;
+    left: 19%;
+    font-weight: 700;
 }
 
 .project {
@@ -790,7 +807,7 @@ div:nth-child(even):before {
     position: absolute;
     transform: translateY(-50%);
     top: 50%;
-    left: -5%;
+    left: -8%;
     width: 100%;
     filter: saturate(150%) contrast(120%) hue-rotate(10deg) drop-shadow(1px 20px 10px rgba(0, 0, 0, 0.3));
 }
@@ -949,6 +966,29 @@ footer p {
         display: block;
       } */
 
+
+
+    header .menu ul li:nth-child(even) a,
+    header .menu ul li:nth-child(odd) a {
+        background: black;
+        background-size: 100%;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+    }
+
+    header .menu ul li:nth-child(odd) a {
+        background: rgb(151, 69, 252);
+        background: linear-gradient(93deg, rgba(151, 69, 252, 1) 10%, rgba(84, 230, 241, 1) 100%);
+        background-size: 100%;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+    }
+
+
     header,
     header.sticky {
         padding: 17px 45px;
@@ -968,17 +1008,16 @@ footer p {
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color: rgba(255, 255, 255, 0.9);
+        background-color: rgba(255, 255, 255, 0.95);
         transition: .5s;
         opacity: 0;
     }
-
-
 
     header .menu ul {
         flex-direction: column;
     }
 
+    header .menu ul li,
     header.sticky .menu ul li {
         border-left: none;
         padding: 5px 0;
@@ -986,6 +1025,7 @@ footer p {
 
     header .menu ul li a {
         font-size: 40px;
+        padding: 0;
     }
 
     header .name,
@@ -1050,7 +1090,8 @@ footer p {
 
     .textBox {
         left: 50%;
-        transform: translateX(-50%);
+        top: 50vh;
+        transform: translate(-50%, -41%);
     }
 
     .typing p {
@@ -1160,14 +1201,18 @@ footer p {
         width: 100%;
     }
 
-    .buttons {
+    .buttons,
+    .dev-info {
         top: -20px;
         left: 0;
     }
 
-    .button-more::after {
+    .button-more::after,
+    .buttons .disabled::after,
+    .buttons .disabled:hover:after {
         display: inline-block;
     }
+
 
     .textBox {
         width: 450px;
@@ -1208,7 +1253,6 @@ footer p {
 
     .textBox {
         width: 85%;
-        height: 460px;
     }
 
 
@@ -1245,9 +1289,17 @@ footer p {
     .media-icons div:nth-child(4) {
         margin-top: -4px;
     }
+
+    .textBox {
+        height: 450px;
+    }
+
+    .typing p {
+        font-size: 25px;
+    }
 }
 
-@media(max-width: 330px) {
+@media(max-width: 350px) {
     .timeline div {
         width: calc(100vw - 30px);
     }
@@ -1261,15 +1313,30 @@ footer p {
         font-size: 13px;
     }
 
+    .typing p {
+        font-size: 22px;
+    }
+
 }
 
 
 
-@media(max-width: 260px) {
+@media(max-width: 279px) {
 
     header,
     header.sticky {
         font-size: 8px;
+    }
+
+    .typing p {
+        margin: 1px 2px;
+
+
+        font-size: 21px;
+    }
+
+    header .menu ul li a {
+        font-size: 25px;
     }
 }
 
@@ -1279,7 +1346,12 @@ footer p {
     .textBox {
         height: 400px;
         width: 580px;
+        top: calc(5vh + 50px);
         transform: translateX(-50%) scale(0.8);
+    }
+
+    .typing p {
+        font-size: 26px;
     }
 }
 
@@ -1334,78 +1406,6 @@ footer p {
 
 
 
-
-
-/* 
-.loader {
-    position: fixed;
-    z-index: 1000000;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100vw;
-    background-color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
-
-.loader .dots span {
-    top: 50%;
-    left: 50%;
-    width: 160px;
-    height: 160px;
-    transform: translate(-50%, -50%);
-} */
-
-/* .loader span {
-    background: rgb(166, 109, 236);
-    background: linear-gradient(93deg, rgba(166, 109, 236, 1) 10%, rgba(84, 230, 241, 1) 100%);
-    position: absolute;
-    border-radius: 50%;
-    display: inline-block;
-}
-
-.loader p {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-} */
-
-/* 
-.loader p:nth-child(3) {
-    top: 60%;
-}
-*/
-
-
-
-/* .loader p:nth-child(1) span {
-    width: 50px;
-    height: 50px;
-    margin: -25px;
-    animation: moving 2s cubic-bezier(.97, .01, .12, .99) infinite alternate;
-}
-
-.loader p:nth-child(2) {
-    position: absolute;
-    animation: squishing 1s ease-in-out infinite alternate;
-}
-
-.loader p:nth-child(2) span {
-    width: 120px;
-    height: 120px;
-    top: 50%;
-    left: 50%;
-    margin: -60px;
-    animation: skewing 2s 1.5s ease-in-out infinite;
-}
-
-.loader.hidden {
-    animation: fadeOut 1s;
-    animation-fill-mode: forwards;
-}  */
 
 @keyframes fadeOut {
     100% {
@@ -1529,7 +1529,8 @@ footer p {
     display: none;
 }
 
-.modal-wrap.active {
+#pythonGame.active,
+#museumManagement.active {
     display: block;
     z-index: 10000;
     position: fixed;
@@ -1543,6 +1544,21 @@ footer p {
     align-items: center;
     background-color: rgba(255, 255, 255, 0.5);
 }
+
+/* .modal-wrap.museumManagement.active {
+    display: block;
+    z-index: 10000;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 100vw;
+    height: 100vh;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.5);
+} */
 
 .trailer {
     position: relative;
@@ -1577,10 +1593,47 @@ footer p {
     }
 }
 
+@keyframes bubbles {
+    0% {
+        opacity: 0;
+    }
+
+    30% {
+        opacity: .5;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(0, -400%);
+    }
+}
+
+.particle {
+    display: block;
+    opacity: 0;
+    position: absolute;
+    animation: bubbles 2s ease-in infinite;
+    border-radius: 100%;
+    z-index: -300;
+    border-radius: 38% 62% 55% 45% / 52% 53% 47% 48%;
+    transform: translate(0, 150%);
+
+}
 
 
 
+a.particletext .particle {
+    display: none;
+}
 
+a.particletext:hover .particle {
+    display: block;
+}
+
+
+a {
+    z-index: 90;
+}
 
 
 
@@ -1613,3 +1666,6 @@ div.active:nth-child(even):before,
     transform: translateX(0);
     opacity: 1;
 }  */
+
+
+/* animowane menu */
