@@ -75,13 +75,13 @@ function circleMenu(){
 // animation when hovering over the menu
 
 function bubbles() {
-    $.each($(".particletext.bubbles"), function(){
-       var bubblecount = ($(this).width()/60)*10;
-       for(var i = 0; i <= bubblecount; i++) {
-        const colors = ["#9745FC", "#54E6F1"];
-          var size = ($.rnd(40,80)/9);
-          var  backgroundColor = colors[Math.floor(Math.random() * colors.length)];
-          $(this).append('<span class="particle" style="top:' + $.rnd(0,100) + '%; left:' + $.rnd(0,97) + '%;width:' + size + 'px; height:' + size + 'px;animation-delay: ' + ($.rnd(0,20)/10) + 's;background-color:' + backgroundColor +';"></span>');
+    $.each($(".bubbles"), function(){
+       const count = ($(this).width()/60)*10;
+       for(let i = 0; i <= count; i++) {
+          const colors = ["#9745FC", "#54E6F1"];
+          const size = ($.rnd(40,80)/9);
+          const backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+          $(this).append('<span class="bubble" style="top:' + $.rnd(0,95) + '%; left:' + $.rnd(0,97) + '%;width:' + size + 'px; height:' + size + 'px;animation-delay: ' + ($.rnd(0,20)/10) + 's;background-color:' + backgroundColor +';"></span>');
        }
     });
  }
@@ -103,6 +103,7 @@ $('li a').on('click', function () {
         scrollTop: $(goToSection).offset().top
     })
 })
+
 
 //modal
 
