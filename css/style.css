@@ -684,6 +684,11 @@ div:nth-child(even):before {
     left: 19%;
 }
 
+.project:nth-last-child(1) .buttons {
+    top: 74%;
+
+}
+
 .button-more {
     height: 56.8px;
     width: 50px;
@@ -725,10 +730,6 @@ div:nth-child(even):before {
 }
 
 .dev-info {
-    text-align: center;
-    position: relative;
-    top: 85%;
-    left: 19%;
     font-weight: 700;
 }
 
@@ -1131,6 +1132,10 @@ footer p {
         left: 0;
     }
 
+    .project:nth-last-child(1) .buttons {
+        top: -4%;
+    }
+    
     .button-more::after,
     .buttons .disabled::after,
     .buttons .disabled:hover:after {
