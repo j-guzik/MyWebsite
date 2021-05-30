@@ -684,10 +684,10 @@ div:nth-child(even):before {
     left: 19%;
 }
 
-.project:nth-last-child(1) .buttons {
+/* .project:nth-last-child(1) .buttons {
     top: 74%;
 
-}
+} */
 
 .button-more {
     height: 56.8px;
@@ -844,7 +844,9 @@ footer p {
 }
 
 #pythonGame.active,
-#museumManagement.active {
+#museumManagement.active,
+#cafeWeb.active,
+#billsSplitter.active {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -870,6 +872,10 @@ footer p {
     outline: none;
     position: relative;
     cursor: pointer;
+}
+
+#videoBillsSplitter{
+    max-height: 900px;
 }
 
 .close {
@@ -1040,6 +1046,11 @@ footer p {
     .trailer video {
         max-width: 90%;
     }
+
+    #videoBillsSplitter{
+        max-height: 90vh;
+    }
+    
 }
 
 @media(max-width: 750px) {

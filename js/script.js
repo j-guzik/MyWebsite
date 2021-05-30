@@ -117,6 +117,17 @@ $('.button-video-python, i.closePython').on('click', function () {
     stopScroll();
 });
 
+$('.button-video-cafe, i.closeCafeWeb').on('click', function () {
+    $("#cafeWeb").toggleClass("active");
+    stopScroll();
+});
+
+$('.button-video-bills, i.closeBillsSplitter').on('click', function () {
+    $("#billsSplitter").toggleClass("active");
+    stopScroll();
+});
+
+
 $('i.closeMuseum').on('click', function () {
     const videoMuseumManagement = document.querySelector('#videoMuseumManagement');
     videoMuseumManagement.pause();
@@ -125,4 +136,14 @@ $('i.closeMuseum').on('click', function () {
 $('i.closePython').on('click', function () {
     const videoPythonGame = document.querySelector('#videoPythonGame');
     videoPythonGame.pause();
+});
+
+$('i.closeCafeWeb').on('click', function () {
+    const videoCafeWeb = document.querySelector('#videoCafeWeb');
+    videoCafeWeb.pause();
+});
+
+$('i.closeBillsSplitter').on('click', function () {
+    const videoBillsSplitter = document.querySelector('#videoBillsSplitter');
+    videoBillsSplitter.pause();
 });
