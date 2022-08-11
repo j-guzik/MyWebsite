@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Justyna Guzik- portfolio</title>
+    <link rel="icon" href="img/favicon.png" type="image/gif" sizes="25x25" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&family=Poller+One&family=Poppins:wght@400;500;600&family=Rubik:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="//kit.fontawesome.com/de46200469.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <div class="wrap bubbles">
+      <header>
+        <h1 class="name">Justyna Guzik</h1>
+        <div class="menu-circle" onclick="circleMenu()">
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+        </div>
+        <menu class="menu">
+          <ul>
+            <li>
+              <a
+                class="bubbles"
+                data-section="home"
+                href="#home"
+                onclick="menu()"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                class="bubbles"
+                data-section="about"
+                href="#about"
+                onclick="menu()"
+                >About Me</a
+              >
+            </li>
+            <li>
+              <a
+                class="bubbles"
+                data-section="experience"
+                href="#experience"
+                onclick="menu()"
+                >Experience</a
+              >
+            </li>
+            <li>
+              <a
+                class="bubbles"
+                data-section="my-projects"
+                href="#my-projects"
+                onclick="menu()"
+                >My Projects</a
+              >
+            </li>
+            <li>
+              <a
+                class="bubbles"
+                data-section="contact"
+                href="#contact"
+                onclick="menu()"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </menu>
+      </header>
+      <section class="banner" id="home">
+        <div class="dots">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="textBox">
+          <div class="terminal">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="typing"></div>
+          <span class="arrow">></span>
+        </div>
+      </section>
+      <section class="about" id="about">
+        <div class="heading">
+          <h2>
+            About
+            <span>Me</span>
+          </h2>
+        </div>
+        <div class="content">
+          <div class="info-about">
+            <p>
+              My education and work experience coupled with my eagerness to
+              learn make me able to cope with the pressure of time and achieve
+              my goals. I'm strongly motivated to learn and I've the ability to
+              think logically. I’m interested in
+              <b>web design and web development</b>. I'm currently developing my
+              TypeScript skills in React app. I work as Frontend Developer Intern. 
+              I want to improve my knowledge and become a Junior Frontend Developer.
+            </p>
+          </div>
+          <div class="technologies">
+            <h3>Main technologies</h3>
+            <div class="technologies-buttons">
+              <i class="fab fa-html5"></i>
+              <i class="fab fa-css3-alt"></i>
+              <i class="fab fa-js-square"></i>
+              <i class="fab fa-sass"></i>
+              <i class="fab fa-git-alt"></i>
+              <i class="fab fa-bootstrap"></i>
+              <i class="fab fa-wordpress"></i>
+              <i class="fab fa-figma"></i>
+              <i class="fab fa-python"></i>
+              <i class="fas fa-database"></i>
+              <i class="fas fa-images"></i>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="experience" id="experience">
+        <div class="heading">
+          <h2>Experience</h2>
+        </div>
+        <div class="content">
+          <div class="timeline">
+            <div>
+              <h2 class="job-name">Frontend developer - internship</h2>
+              <p>software development in React (TypeScript)</p>
+              <p>creating tests (Cypress, Jest)</p>
+              <p>participation in disaigner meetings</p>
+            </div>
+            <div>
+              <h2 class="job-name">Junior UI designer</h2>
+              <p>application development</p>
+              <p>fixing errors in the code from the view side</p>
+              <p>drawing new application views</p>
+              <p>creating thumbnails / banners</p>
+              <p>editing company website in WordPress</p>
+              <p>meetings with the client</p>
+              <p>work with Visual Studio Code, Git, Jira</p>
+            </div>
+            <div>
+              <h2 class="job-name">
+                Full-stack developer - student internship
+              </h2>
+              <p>application development</p>
+              <p>creating unit tests in python</p>
+              <p>participation in Daily Scrum meetings</p>
+              <p>work with Slack, Git, InteliJ Idea</p>
+            </div>
+            <div>
+              <h2 class="job-name">
+                Junior loan service specialist<br />at Alior Bank
+              </h2>
+              <p>accounting of commission, fees, costs of loan</p>
+              <p>insurance service for credit accounts</p>
+              <p>support for the complaint department</p>
+            </div>
+            <div>
+              <h2 class="job-name">
+                Junior customer service specialist<br />at ING Silesian Bank
+              </h2>
+              <p>
+                support and educate customers about an online banking and a
+                mobile app
+              </p>
+              <p>keep informed of bank products, services and procedures</p>
+              <p>issuing documents</p>
+              <p>backoffice support</p>
+            </div>
+            <div>
+              <h2 class="job-name">Computer Science student</h2>
+            </div>
+            <div>
+              <h2 class="job-name">
+                Student internship at Urząd Skabowy w Bochni
+              </h2>
+              <p>archive documents</p>
+              <p>keep records of debtors</p>
+              <p>edit and format correspondence</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="my-projects" id="my-projects">
+        <div class="heading">
+          <h2><span>My </span>Projects</h2>
+        </div>
+        <div class="content">
+          <div class="projects">
+            <div class="project">
+              <div class="project-image">
+                <div class="image-container">
+                  <img class="movie" src="img/movie.png" alt="movie" />
+                </div>
+              </div>
+              <div class="project-info">
+                <div class="project-title">Movie Recommender</div>
+                <div class="project-technologies">
+                  <p>Angular</p>
+                  <p>Python</p>
+                  <p>SQL</p>
+                </div>
+                <div class="project-description">
+                  <p>
+                    Web application for movie recommendation.<br />
+                    The recommendation engine is based on the similarity between
+                    movies - content based system.
+                  </p>
+                </div>
+              </div>
+              <div class="buttons">
+                <button class="button-live button-video-recomm button-more">
+                  <i class="far fa-eye"></i>
+                </button>
+                <a
+                  href="https://github.com/j-guzik/movieRecommendationSystem"
+                  target="_blank"
+                  class="button-more"
+                  ><i class="fab fa-github"></i
+                ></a>
+              </div>
+            </div>
+            <div class="project">
+              <div class="project-image">
+                <div class="image-container">
+                  <img src="img/img1.png" alt="" />
+                </div>
+              </div>
+              <div class="project-info">
+                <div class="project-title">get jellies</div>
+                <div class="project-technologies">
+                  <p>JS</p>
+                  <p>HTML</p>
+                  <p>CSS</p>
+                </div>
+                <div class="project-description">
+                  <p>
+                    This is a tile matching game. You need to match at least 3
+                    of the same pictures. You go to the higher level when you
+                    reach the indicated number of points in the designated
+                    moves.
+                  </p>
+                </div>
+              </div>
+              <div class="buttons">
+                <a
+                  href="https://get-jellies.netlify.app/"
+                  target="_blank"
+                  class="button-more"
+                  ><i class="far fa-eye"></i
+                ></a>
+                <a
+                  href="https://github.com/j-guzik/GetJellies"
+                  target="_blank"
+                  class="button-more"
+                  ><i class="fab fa-github"></i
+                ></a>
+              </div>
+            </div>
+
+            <div class="project">
+              <div class="project-image">
+                <div class="image-container">
+                  <img src="img/img3.png" alt="" />
+                </div>
+              </div>
+              <div class="project-info">
+                <div class="project-title">portfolio</div>
+                <div class="project-technologies">
+                  <p>JS</p>
+                  <p>HTML</p>
+                  <p>CSS</p>
+                </div>
+                <div class="project-description">
+                  <p>
+                    Website designed to present my qualifications and projects
+                    in an attractive and transparent way. Apart from pure JS I
+                    also used jquery
+                  </p>
+                </div>
+              </div>
+              <div class="buttons">
+                <button class="button-live button-more disabled">
+                  <i class="far fa-eye"></i>
+                </button>
+                <a
+                  href="https://github.com/j-guzik/MyWebsite"
+                  target="_blank"
+                  class="button-more"
+                  ><i class="fab fa-github"></i
+                ></a>
+              </div>
+            </div>
+            <div class="project">
+              <div class="project-image">
+                <div class="image-container">
+                  <img src="img/img4.png" alt="" />
+                </div>
+              </div>
+              <div class="project-info">
+                <div class="project-title">Arcade game in python</div>
+                <div class="project-technologies">
+                  <p>Python</p>
+                </div>
+                <div class="project-description">
+                  <p>
+                    An arcade game created with the help of the pygame library.
+                    Project created in a group of two. The goal of the game is
+                    to get rid of the enemies and save the princess.
+                  </p>
+                </div>
+              </div>
+              <div class="buttons">
+                <button class="button-live button-video-python button-more">
+                  <i class="far fa-eye"></i>
+                </button>
+                <a
+                  href="https://github.com/j-guzik/ActionGameInPython"
+                  target="_blank"
+                  class="button-more"
+                  ><i class="fab fa-github"></i
+                ></a>
+              </div>
+            </div>
+            <!-- <div class="project">
+              <div class="project-image">
+                <div class="image-container">
+                  <img src="img/coffe.png" alt="coffe" />
+                </div>
+              </div>
+              <div class="project-info">
+                <div class="project-title">cafe website</div>
+                <div class="project-technologies">
+                  <p>WordPress</p>
+                </div>
+                <div class="project-description">
+                  <p>
+                    Website created for a pet-friendly cafe. The website is made
+                    in WordPress. <br />I used Elementor WordPress Plugin and
+                    the available templates.
+                  </p>
+                </div>
+              </div>
+              <div class="buttons">
+                <button class="button-live button-video-cafe button-more">
+                  <i class="far fa-eye"></i>
+                </button>
+              </div>
+            </div> -->
+            <div class="project">
+              <div class="project-image">
+                <div class="image-container">
+                  <img src="img/img2.png" alt="" />
+                </div>
+              </div>
+              <div class="project-info">
+                <div class="project-title">museum management</div>
+                <div class="project-technologies">
+                  <p>C#</p>
+                  <p>SQL</p>
+                  <p>JS</p>
+                  <p>HTML</p>
+                  <p>CSS</p>
+                </div>
+                <div class="project-description">
+                  <p>
+                    Web application for .net Core MVC. It is used to manage
+                    museum exhibits. The data can only be seen after logging in.
+                    The application is connected to the database.
+                  </p>
+                </div>
+              </div>
+              <div class="buttons">
+                <button class="button-live button-video-museum button-more">
+                  <i class="far fa-eye"></i>
+                </button>
+                <a
+                  href="https://github.com/j-guzik/MuseumManagement"
+                  target="_blank"
+                  class="button-more"
+                  ><i class="fab fa-github"></i
+                ></a>
+              </div>
+            </div>
+            <div class="project">
+              <div class="project-image">
+                <div class="image-container">
+                  <img src="img/img5.png" alt="" />
+                </div>
+              </div>
+              <div class="project-info">
+                <div class="project-title">bills splitter app</div>
+                <div class="project-technologies">
+                  <p>Java</p>
+                </div>
+                <div class="project-description">
+                  <p>
+                    A mobile app designed to share costs between friends for
+                    various events. An additional advantage of the application
+                    is the ability to scan receipts and extract data from them.
+                  </p>
+                </div>
+              </div>
+              <div class="buttons">
+                <!-- <div class="dev-info">
+                                <p>App in development.</p>
+                            </div> -->
+                <button class="button-live button-video-bills button-more">
+                  <i class="far fa-eye"></i>
+                </button>
+                <a
+                  href="https://github.com/j-guzik/SplitBills"
+                  target="_blank"
+                  class="button-more"
+                  ><i class="fab fa-github"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <svg
+        id="contact-waves"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1580 470"
+      >
+        <defs>
+          <linearGradient id="ContactGradient">
+            <stop offset="10%" stop-color="rgba(166, 109, 236, 1)" />
+            <stop offset="100%" stop-color="rgba(84, 230, 241, 1)" />
+          </linearGradient>
+        </defs>
+        <path
+          fill="#00cba9"
+          fill-opacity="1"
+          d="M 0.00,470.00
+           C 0.00,470.00 1580.00,470.00 1580.00,470.00
+             1580.00,470.00 1580.00,8.00 1580.00,8.00
+             1577.60,11.23 1576.11,13.94 1572.96,16.67
+             1565.63,23.03 1540.98,32.30 1531.00,35.67
+             1498.55,46.63 1465.88,57.33 1432.00,63.08
+             1391.62,69.94 1360.21,74.06 1319.00,74.00
+             1319.00,74.00 1298.00,73.00 1298.00,73.00
+             1284.19,72.83 1248.97,67.66 1235.00,64.58
+             1176.18,51.59 1157.11,34.29 1108.00,19.02
+             1074.17,8.51 1040.21,3.32 1005.00,0.91
+             1005.00,0.91 993.00,0.00 993.00,0.00
+             993.00,0.00 952.00,0.00 952.00,0.00
+             952.00,0.00 941.00,0.96 941.00,0.96
+             901.44,2.68 852.20,10.19 814.00,20.74
+             814.00,20.74 777.00,31.67 777.00,31.67
+             777.00,31.67 747.00,41.58 747.00,41.58
+             707.28,52.62 666.81,60.45 626.00,66.13
+             626.00,66.13 566.00,72.09 566.00,72.09
+             566.00,72.09 556.00,73.00 556.00,73.00
+             556.00,73.00 536.00,74.00 536.00,74.00
+             536.00,74.00 493.00,74.00 493.00,74.00
+             493.00,74.00 480.00,73.04 480.00,73.04
+             450.00,71.73 416.20,67.83 387.00,60.63
+             387.00,60.63 338.00,45.95 338.00,45.95
+             338.00,45.95 305.00,32.81 305.00,32.81
+             305.00,32.81 262.00,18.42 262.00,18.42
+             241.28,12.66 205.24,6.03 184.00,6.00
+             184.00,6.00 148.00,6.00 148.00,6.00
+             148.00,6.00 138.00,6.91 138.00,6.91
+             101.63,9.45 65.25,18.70 32.00,33.70
+             32.00,33.70 10.00,44.77 10.00,44.77
+             7.33,46.22 2.55,48.59 1.02,51.21
+             -0.21,53.31 0.00,56.61 0.00,59.00
+             0.00,59.00 0.00,470.00 0.00,470.00 Z"
+        />
+      </svg>
+      <section class="contact" id="contact">
+        <div class="heading">
+          <h2>Contact</h2>
+        </div>
+        <div class="content">
+          <div class="media-icons">
+            <div class="phone">
+              <i class="fas fa-phone-square"></i>
+              <div class="media-content">
+                <h3>Phone</h3>
+                <p>536 150 148</p>
+              </div>
+            </div>
+            <div class="mail">
+              <i class="fas fa-envelope-open"></i>
+              <div class="media-content">
+                <h3>Email</h3>
+                <p>justyna.b.guzik@gmail.com</p>
+              </div>
+            </div>
+            <div class="github">
+              <a href="https://github.com/j-guzik" target="_blank"
+                ><i class="fab fa-github"></i
+              ></a>
+              <div class="media-content">
+                <a href="https://github.com/j-guzik" target="_blank"
+                  ><h3>GitHub</h3></a
+                >
+              </div>
+            </div>
+            <div class="linkedin">
+              <a
+                href="https://www.linkedin.com/in/justyna-guzik-986468207/"
+                target="_blank"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+              <div class="media-content">
+                <a
+                  href="https://www.linkedin.com/in/justyna-guzik-986468207/"
+                  target="_blank"
+                  ><h3>LinkedIn</h3></a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer>
+        <p>&copy; 2022 ALL RIGHTS RESERVED</p>
+      </footer>
+    </div>
+    <div class="modal-wrap" id="museumManagement">
+      <div class="trailer">
+        <video
+          src="video/MuseumManagement.mp4"
+          controls="true"
+          id="videoMuseumManagement"
+        ></video>
+        <i class="close closeMuseum fas fa-window-close"></i>
+      </div>
+    </div>
+    <div class="modal-wrap" id="recommMovie">
+      <div class="trailer">
+        <video
+          src="video/RecommenderMovie.mp4"
+          controls="true"
+          id="videoRecommMovie"
+        ></video>
+        <i class="close closeRecomm fas fa-window-close"></i>
+      </div>
+    </div>
+    <div class="modal-wrap" id="pythonGame">
+      <div class="trailer">
+        <video
+          src="video/GameInPython.mp4"
+          controls="true"
+          id="videoPythonGame"
+        ></video>
+        <i class="close closePython fas fa-window-close"></i>
+      </div>
+    </div>
+    <div class="modal-wrap" id="cafeWeb">
+      <div class="trailer">
+        <video
+          src="video/wordpress.mp4"
+          controls="true"
+          id="videoCafeWeb"
+        ></video>
+        <i class="close closeCafeWeb fas fa-window-close"></i>
+      </div>
+    </div>
+    <div class="modal-wrap" id="billsSplitter">
+      <div class="trailer">
+        <video
+          src="video/BillsSplitter.mp4"
+          controls="true"
+          id="videoBillsSplitter"
+        ></video>
+        <i class="close closeBillsSplitter fas fa-window-close"></i>
+      </div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.min.js"
+      integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
